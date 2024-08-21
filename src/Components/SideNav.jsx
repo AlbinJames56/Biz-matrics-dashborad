@@ -34,9 +34,9 @@ function SideNav() {
 
       {/* Sidebar */}
       <nav
-        className={`p-3 m-2 h-screen fixed flex flex-col justify-between bg-white rounded-xl border-3 border-gray-300 transition-transform duration-300 ${
+        className={`p-3 m-2  fixed flex flex-col justify-between bg-white rounded-xl border-3 border-gray-300 transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 lg:flex lg:relative lg:w-72`}
+        } lg:translate-x-0 lg:flex lg:relative lg:w-72  h-full min-h-screen`}
         style={{ width: "300px", zIndex: 50 }}
       >
         <div className="flex-1 bg-white">

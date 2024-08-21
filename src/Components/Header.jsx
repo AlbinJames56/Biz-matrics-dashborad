@@ -3,22 +3,21 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <nav className="flex justify-between items-center   p-4">
-      <div className="flex items-center">
-        <Link to="#home">
-          <p className="text-gray-600 text-sm font-medium mt-3">DashBoard</p>
-        </Link>
-      </div>
+    <nav className="flex justify-between items-center   pt-2 p-4 sm:pt-0">
+      <div className="flex flex-col sm:pt-0  lg:flex-row  ">
+  <Link to="#home" className="mt-0 lg:m-4  lg:ml-4">
+    <p className="text-gray-600 text-sm font-medium lg:mt-4 lg:pt-5 sm:mt-1">DashBoard</p>
+  </Link>
 
-      <div className="flex items-center space-x-6">
-        <form className="flex items-center">
-          <input
-            type="text"
-            placeholder="Search"
-            className="p-2 text-sm bg-gray-100 border rounded-md focus:outline-none focus:ring-2 focus:ring-grey-300"
-          />
-        </form>
-
+  <form className="flex items-center">
+    <input
+      type="text"
+      placeholder="Search"
+      className="p-2 text-sm bg-gray-100 border rounded-md focus:outline-none focus:ring-2 focus:ring-grey-300"
+    />
+  </form>
+</div>
+    <div className="flex items-center space-x-6">
         <Link
           to="/signup"
           className="flex items-center text-gray-700"
