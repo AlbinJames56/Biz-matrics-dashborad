@@ -26,7 +26,7 @@ function SideNav() {
     <>
       {/* Hamburger Button */}
       <button
-        className="lg:hidden p-4"
+        className="md:hidden p-4"
         onClick={toggleSidebar}
       >
         <i className="fa-solid fa-bars text-2xl"></i>
@@ -36,7 +36,7 @@ function SideNav() {
       <nav
         className={`p-3 m-2  fixed flex flex-col justify-between bg-white rounded-xl border-3 border-gray-300 transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 lg:flex lg:relative lg:w-72  h-full min-h-screen`}
+        } md:translate-x-0 md:flex md:relative lg:w-72  h-full min-h-screen`}
         style={{ width: "300px", zIndex: 50 }}
       >
         <div className="flex-1 bg-white">
