@@ -19,7 +19,7 @@ function App() {
 
         <div className="flex-1 flex flex-col overflow-hidden">
           <Header />
-          <div className="flex-1 overflow-auto p-4 ml-5">
+          <div className="flex-1 overflow-auto p-3 pt-2 ml-5">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
@@ -28,8 +28,9 @@ function App() {
               <Route path="/tables" element={<Tables />} />
               <Route path="/notifications" element={<Notifications />} />
             </Routes>
+             <Footer />
           </div>
-          <Footer />
+         
         </div>
       </div>
     </>
