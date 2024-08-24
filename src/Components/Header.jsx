@@ -21,7 +21,7 @@ function Header() {
       </div>
       <div className="flex items-center space-x-6">
         <Link
-          to="/signup"
+          to="/login"
           className="flex items-center text-gray-700"
           style={{ textDecoration: "none" }}
         >

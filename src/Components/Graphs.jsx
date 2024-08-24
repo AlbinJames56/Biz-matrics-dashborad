@@ -40,7 +40,7 @@ const Graphs = () => {
     <>
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4  ">
         {/* Bar chart */}
-        <div className="bg-white shadow-md rounded-lg p-3">
+        <div className="bg-white shadow-md rounded-lg p-3 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={BarData} className="bg-white">
               <CartesianGrid strokeDasharray="3 3" />
@@ -61,7 +61,7 @@ const Graphs = () => {
         </div>
 
         {/* Line Chart sales*/}
-        <div className="bg-white shadow-md rounded-lg p-3 pt-3  ">
+        <div className="bg-white shadow-md rounded-lg p-3 pt-3  transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
         <div className="overflow-x-auto">
         <div className="min-w-[150%] p-2">
           <ResponsiveContainer width="150%" height={300}>
@@ -84,9 +84,8 @@ const Graphs = () => {
            
         </div>
 
-        {/* line Chart completed */}
-        {/* Line Chart 2 */}
-        <div className="bg-white shadow-md rounded-lg p-3">
+        {/* line Chart completed */} 
+        <div className="bg-white shadow-md rounded-lg p-3 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
         <div className="overflow-x-auto">
         <div className="min-w-[150%] p-2">
           <ResponsiveContainer width="100%" height={300}   >

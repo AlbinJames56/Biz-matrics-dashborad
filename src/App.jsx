@@ -21,7 +21,7 @@ function App() {
           <Header />
           <div className="flex-1 overflow-auto p-3 pt-2 ml-5">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/profile" element={<Profile />} />

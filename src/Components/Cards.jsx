@@ -3,7 +3,7 @@ import React from "react";
 const Cards = ({ title, value, percentage, icon, trend, text }) => {
   return (
     <>
-    <div className="bg-white shadow-md rounded-lg p-4">
+    <div className="bg-white shadow-md rounded-lg p-4 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
         <div className="bg-white flex items-center justify-between ">
         <div className="bg-white">
           <p className="text-grey-600 text-sm bg-white">{title}</p>
