@@ -1,22 +1,140 @@
 import React, { useState } from 'react';
 
-const ProjectsTable = ({ projects }) => {
+const ProjectsTable = ( ) => {
+  const projects = [
+    {
+      icon: "https://demos.creative-tim.com/material-tailwind-dashboard-react/img/logo-xd.svg",
+      title: "Material XD Version",
+      budget: 14000,
+      member: [
+        {
+          name: "Alex VU",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs10cupyp3Wf-pZvdPjGQuKne14ngVZbYdDQ&s",
+        },
+        {
+          name: "Iqbal  Sim",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jjesMNo907W41HSwvY8nXkj21bG-LNJS7TsU37hwyNuVtsABWRnl-VDclCNtOw2EWOQ&usqp=CAU",
+        },
+        {
+          name: "Afra Aru",
+          img: "https://media.istockphoto.com/id/1413766111/photo/cheerful-mid-adult-business-woman-smiling-at-office.webp?b=1&s=170667a&w=0&k=20&c=lw6pOopy2hlnDffEUXd3igBtfCZDlYilphHffFLYWYc=",
+        },
+      ],
+      completion: 60,
+    },
+    {
+      icon: "https://demos.creative-tim.com/material-tailwind-dashboard-react/img/logo-atlassian.svg",
+      title: "Add Progress Track",
+      budget: 3000,
+      member: [
+        {
+          name: "Iqbal  Sim",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jjesMNo907W41HSwvY8nXkj21bG-LNJS7TsU37hwyNuVtsABWRnl-VDclCNtOw2EWOQ&usqp=CAU",
+        },
+        {
+          name: "Afra Aru",
+          img: "https://media.istockphoto.com/id/1413766111/photo/cheerful-mid-adult-business-woman-smiling-at-office.webp?b=1&s=170667a&w=0&k=20&c=lw6pOopy2hlnDffEUXd3igBtfCZDlYilphHffFLYWYc=",
+        },
+        {
+          name: "Aldrin jers",
+          img: "https://img.freepik.com/free-photo/smiling-young-male-professional-standing-with-arms-crossed-while-making-eye-contact-against-isolated-background_662251-838.jpg",
+        },
+      ],
+      completion: 10,
+    },
+    {
+      icon: "https://demos.creative-tim.com/material-tailwind-dashboard-react/img/logo-slack.svg",
+      title: "Fix Platform Errors",
+      budget: "Not set",
+      member: [
+        {
+          name: "Aishu S",
+          img: "https://reductress.com/wp-content/uploads/2019/06/petite-woman-1-820x500.jpg",
+        },
+        {
+          name: "Aldrin jers",
+          img: "https://img.freepik.com/free-photo/smiling-young-male-professional-standing-with-arms-crossed-while-making-eye-contact-against-isolated-background_662251-838.jpg",
+        },
+      ],
+      completion: 100,
+    },
+    {
+      icon: "https://demos.creative-tim.com/material-tailwind-dashboard-react/img/logo-spotify.svg",
+      title: "Launch our Mobile App",
+      budget: 20500,
+      member: [
+        {
+          name: "Afra Aru",
+          img: "https://media.istockphoto.com/id/1413766111/photo/cheerful-mid-adult-business-woman-smiling-at-office.webp?b=1&s=170667a&w=0&k=20&c=lw6pOopy2hlnDffEUXd3igBtfCZDlYilphHffFLYWYc=",
+        },
+        {
+          name: "Aldrin jers",
+          img: "https://img.freepik.com/free-photo/smiling-young-male-professional-standing-with-arms-crossed-while-making-eye-contact-against-isolated-background_662251-838.jpg",
+        },
+      ],
+      completion: 35,
+    },
+    {
+      icon: "https://demos.creative-tim.com/material-tailwind-dashboard-react/img/logo-jira.svg",
+      title: "Add the New Pricing Page",
+      budget: 500,
+      member: [
+        {
+          name: "Aldrin jers",
+          img: "https://img.freepik.com/free-photo/smiling-young-male-professional-standing-with-arms-crossed-while-making-eye-contact-against-isolated-background_662251-838.jpg",
+        },
+        {
+          name: "Afra Aru",
+          img: "https://media.istockphoto.com/id/1413766111/photo/cheerful-mid-adult-business-woman-smiling-at-office.webp?b=1&s=170667a&w=0&k=20&c=lw6pOopy2hlnDffEUXd3igBtfCZDlYilphHffFLYWYc=",
+        },
+        {
+          name: "Anu Steeve ",
+          img: "https://images.wsj.net/im-330620/?width=1280&size=1",
+        },
+        {
+          name: "Iqbal  Sim",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jjesMNo907W41HSwvY8nXkj21bG-LNJS7TsU37hwyNuVtsABWRnl-VDclCNtOw2EWOQ&usqp=CAU",
+        },
+        {
+          name: "Afra Aru",
+          img: "https://media.istockphoto.com/id/1413766111/photo/cheerful-mid-adult-business-woman-smiling-at-office.webp?b=1&s=170667a&w=0&k=20&c=lw6pOopy2hlnDffEUXd3igBtfCZDlYilphHffFLYWYc=",
+        },
+      ],
+      completion: 100,
+    },
+    {
+      icon: "https://img.freepik.com/free-photo/portrait-blonde-woman-looking-photographer_23-2148348970.jpg",
+      title: "Redesign New Online Shop",
+      budget: 2000,
+      member: [
+        {
+          name: "Anu Steeve ",
+          img: "https://images.wsj.net/im-330620/?width=1280&size=1",
+        },
+        {
+          name: "Afra Aru",
+          img: "https://media.istockphoto.com/id/1413766111/photo/cheerful-mid-adult-business-woman-smiling-at-office.webp?b=1&s=170667a&w=0&k=20&c=lw6pOopy2hlnDffEUXd3igBtfCZDlYilphHffFLYWYc=",
+        },
+      ],
+      completion: 75,
+    },
+  ];
     const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="p-4 bg-white">
-      <table className="min-w-full divide-y divide-gray-200">
+    <div className="p-5 bg-white relative overflow-x-auto">
+      <table className="min-w-full divide-y divide-gray-200 ">
         <thead>
           <tr>
-            <th className="px-6   text-left bg-white text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6   text-left bg-white   font-medium text-gray-500 uppercase tracking-wider">
               Companies
             </th>
-            <th className="px-6   text-left bg-white text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6   text-left bg-white   font-medium text-gray-500 uppercase tracking-wider">
               Members
             </th>
-            <th className="px-6   text-left bg-white text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6   text-left bg-white   font-medium text-gray-500 uppercase tracking-wider">
               Budget
             </th>
-            <th className="px-6   text-left bg-white text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6   text-left bg-white   font-medium text-gray-500 uppercase tracking-wider">
               Completion
             </th>
           </tr>
